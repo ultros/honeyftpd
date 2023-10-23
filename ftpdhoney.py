@@ -9,7 +9,7 @@ from pyftpdlib.servers import FTPServer
 class DummyAuthorizerCollectCreds(DummyAuthorizer):
 
     def validate_authentication(self, username, password, handler):
-        with open("ftpdhoney-credentials.txt", 'a') as file_obj:
+        with open("/opt/ftpdhoney/ftpdhoney-credentials.txt", 'a') as file_obj:
             file_obj.write(f"{handler.addr[0]}:{username}:{password}\n")
         raise pyftpdlib.authorizers.AuthenticationFailed
 
