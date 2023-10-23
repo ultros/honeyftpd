@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 # ftpdhoney.py
 ### Simple FTPD Honeypot for Capturing Credentials
 
@@ -20,7 +18,7 @@
     
     [Service]
     Type=simple
-    ExecStart=/usr/bin/python3.11 /opt/ftpdhoney/ftpdhoney.py
+    ExecStart=/usr/bin/python3 /opt/honeyftpd/ftpdhoney.py
     Restart=always
     
     [Install]
